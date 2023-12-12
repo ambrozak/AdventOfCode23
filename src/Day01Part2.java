@@ -1,9 +1,9 @@
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
-public class Day01Part1 {
+public class Day01Part2 {
 
-	public Day01Part1() {
+	public Day01Part2() {
 	}
 
 	public static void main(String[] args) throws FileNotFoundException{
@@ -13,6 +13,8 @@ public class Day01Part1 {
 		while(scanner.hasNext()) {
 			String currLine = scanner.nextLine();
 			System.out.print(currLine + " ");
+			String lineForFirst = currLine;
+			String lineForLast = currLine;
 			for(int i = 0; i < currLine.length(); i++) {
 				if(Character.isDigit(currLine.charAt(i))) {
 					total += 10 * Character.getNumericValue(currLine.charAt(i));
